@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col s12 l6 offset-l3 counter-list">
+    <div class="col s12">
+      <h1 class="center-align">Counter App</h1>
+    </div>
+    <form class="col s12" name="form" [formGroup]="countersForm" (ngSubmit)="newCounter()">
+      <div class="input-field col s7">
+        <input placeholder="Title" id="title" name="title" type="text" class="validate" formControlName="title" [(ngModel)]="counterTitle">
+      </div>
+      <div class="col s4">
+        <button class="btn waves-effect waves-light add-btn" type="submit" name="action">Add counter</button>
+      </div>
+      <div class="col s12">
+        <ul class="counters">
+          <li class="valign-wrapper" *ngFor="let counter of counters">
+            <div class="col s5 valign-wrapper">
+              <p class="col s10">{{ counter.title }}</p>
+            </div>
+            <div class="col s7 valign-wrapper">
+              <a class=" btn-floating waves-effect waves-light" (click)="decrease(counter.id)">
+                <i class="material-icons">remove</i>
+              </a>
+              <p class="count center-align">{{ counter.count }}</p>
+              <a class="btn-floating waves-effect waves-light" (click)="increase(counter.id)">
+                <i class="material-icons">add</i>
+              </a>
+              <span style="margin: 0px" class="col s2 delete-icons" (click)="delete(counter.id)">
+                <i class="material-icons clear-icon">delete</i>
+              </span>
+            </div>
+
+          </li>
+          <div class="col s12 total">
+            <div class="col s5">
+              <p>Total</p>
+            </div>
+            <div class="col s7">
+              <p class="left-align">{{ total }}</p>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+    </form>
+  </div>
+</div>

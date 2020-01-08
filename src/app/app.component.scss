@@ -1,0 +1,66 @@
+/* Global variables Simple */
+$primary-color: #e63c50;
+$secondary-color: #00bcd4cf;
+$gray-dark: #828282;
+$gray-medium: #e0e0e0;
+$gray-light: #f3f3f3;
+
+/* label underline focus color */
+.input-field input:focus {
+  border-bottom: solid 1px $primary-color !important;
+  box-shadow: none !important;
+}
+.counter-list {
+  h1 {
+    font-size: 34px;
+    color: #e63c50;
+  }
+
+  .add-btn {
+    margin-top: 20px;
+    background: $primary-color;
+  }
+  .counters {
+    padding-left: 0px;
+    .delete-icons {
+      padding-left: 20%;
+    }
+    li {
+      border-bottom: solid 1px $gray-medium;
+    }
+
+    .clear-icon {
+      color: $primary-color;
+      cursor: pointer;
+      padding-top: 10px;
+      font-size: 30px;
+    }
+    .total {
+      padding-top: 10px;
+      .left-align {
+        margin-left: 24%;
+      }
+    }
+  }
+  p {
+    word-break: break-all;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-left: 0px;
+    color: $gray-dark;
+  }
+  .btn-floating {
+    width: 30px;
+    height: 30px;
+    background: $secondary-color;
+    i {
+      cursor: pointer;
+      line-height: 30px;
+    }
+  }
+  .count {
+    width: 35%;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
